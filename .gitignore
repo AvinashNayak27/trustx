@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.vercel/
+dist/
+build/
+target/
+.snfoundry_cache/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.agents/
+skills-lock.json
