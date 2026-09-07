@@ -1,0 +1,27 @@
+{
+  "name": "trustx",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TrustX private STRK ↔ UPI onramp/offramp monorepo",
+  "workspaces": [
+    "apps/ui",
+    "apps/tee-server",
+    "apps/extension",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:ui": "npm run dev --workspace trustx-ui",
+    "dev:tee": "npm run dev --workspace @tee-replay/tee-server",
+    "build:ui": "npm run build --workspace trustx-ui",
+    "build:tee": "npm run build --workspace @tee-replay/tee-server",
+    "build:extension": "npm run build --workspace @tee-replay/extension",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
