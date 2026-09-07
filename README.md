@@ -10,6 +10,15 @@ TrustX is a private and secure peer-to-peer STRK ↔ UPI onramp/offramp for Star
 - Starknet Mainnet explorer: [Voyager](https://voyager.online/)
 - Starknet: [starknet.io](https://www.starknet.io/)
 
+## Demo and Mainnet activity
+
+- Demo video: [TrustX demo on Cap](https://cap.so/s/eejb2wrkb7nk972)
+- Mainnet deposit: [0x3f00ea…9da44](https://voyager.online/tx/0x3f00ea4080e58fb73ef1246eb46703841cf6fa3b566f4b4bd587f328a39da44)
+- Mainnet intent signal: [0x17d7aa…d0460](https://voyager.online/tx/0x17d7aa46024de19eb489eff73177e5f165d6e2f4f0d666a69115c8a649d0460)
+- Mainnet settlement: [0x1f7281…a2c5](https://voyager.online/tx/0x1f72819b26f167c821463081c893ab638efad354656200cc134fab5af5aa2c5)
+
+The same metadata is machine-readable in [`strk20.json`](./strk20.json).
+
 ## Repository layout
 
 ```text
