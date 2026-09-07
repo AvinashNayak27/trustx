@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Trustx TEE Amazon Pay Signer",
+  "version": "0.2.0",
+  "description": "Trustx allow-listed Amazon Pay replay and Stark signing for Sepolia UPI escrow.",
+  "action": {
+    "default_title": "Trustx TEE Signer",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://trustx-ui.vercel.app/*",
+        "http://localhost:8787/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "https://www.amazon.in/pay/history*",
+        "https://www.amazon.in/pay/transaction-details*"
+      ],
+      "js": ["amazonNotice.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["page.js"],
+      "matches": [
+        "https://trustx-ui.vercel.app/*",
+        "http://localhost:8787/*"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "https://trustx-ui.vercel.app/*",
+    "http://localhost:8787/*",
+    "https://trustx-tee-server.vercel.app/*",
+    "http://localhost:8789/*",
+    "https://www.amazon.in/pay/transaction-details*"
+  ],
+  "permissions": ["webRequest", "tabs"]
+}
