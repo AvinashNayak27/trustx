@@ -878,7 +878,11 @@ export default function TrustxApp({ network }: { network: NetworkId }) {
         <h1>
           Private STRK <em>↔ UPI</em>
         </h1>
-        <p>Shielded until the Amazon Pay receipt is TEE-attested.</p>
+        <p>
+          Seller funds stay shielded in the STRK20 pool. After the Amazon Pay
+          receipt is TEE-attested, the buyer receives a shielded STRK note —
+          private on both sides.
+        </p>
         <div className={styles.heroActions}>
           <button onClick={() => setTab("market")}>Explore marketplace</button>
           <button className={styles.ghostButton} onClick={() => setTab("sell")}>

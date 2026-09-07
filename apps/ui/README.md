@@ -1,6 +1,6 @@
 # Trustx
 
-Trustx is a private, secure P2P UPI on/off-ramp on Starknet. Sellers list STRK behind the privacy pool; buyers signal a private intent, pay by UPI, and settle with a TEE-attested receipt.
+Trustx is a private, secure P2P UPI on/off-ramp on Starknet. Sellers list STRK behind the privacy pool; buyers signal a private intent, pay by UPI, and settle with a TEE-attested receipt. Seller STRK remains shielded, and successful settlement credits the buyer with a shielded STRK note — private on both sides.
 
 ## Sepolia demo
 
@@ -22,6 +22,7 @@ Open `http://localhost:8787`, connect a privacy-enabled Starknet wallet on Sepol
 ## Trust model
 
 - The UPI escrow verifies the TEE's Stark signature on-chain before settlement.
+- Settlement does not make a public STRK transfer: the escrow approves the privacy pool to credit the buyer's shielded note.
 - Buyers pay a 1 STRK private intent fee, which locks a listing for 30 minutes.
 - Sellers can recover an unfilled listing only from their selected recovery address after any active intent expires.
 - Listings are discovered from `DepositCreated` events through Alchemy, then their live state is read from the contract. No manual deposit IDs.

@@ -1,6 +1,6 @@
 # TrustX
 
-TrustX is a private and secure peer-to-peer STRK ↔ UPI onramp/offramp for Starknet. A buyer pays a seller through UPI/Amazon Pay, while the STRK leg remains shielded until a receipt is attested and the escrow contract releases the funds.
+TrustX is a private and secure peer-to-peer STRK ↔ UPI onramp/offramp for Starknet. A buyer pays a seller through UPI/Amazon Pay, while the seller's STRK stays shielded in the STRK20 pool until a receipt is attested. The escrow then credits the buyer with a shielded STRK note, keeping the STRK leg private on both the buyer and seller sides.
 
 ## Live links
 
@@ -46,7 +46,7 @@ User browser
                           canonicalizes receipt fields, and signs the payment hash
 ```
 
-The extension never sends a broad browser session to the server. It selects the provider-approved request headers, encrypts the short-lived session material to the signer, and sends it to the TEE API. The TEE response contains canonical payment fields and a Stark signature. The UI checks the receipt status, amount, UPI destination, signer public key, and signature before submitting the privacy claim. The Cairo escrow verifies the same canonical hash on-chain, prevents replay/duplicate claims, and controls deposit, intent, claim, and recovery paths.
+The extension never sends a broad browser session to the server. It selects the provider-approved request headers, encrypts the short-lived session material to the signer, and sends it to the TEE API. The TEE response contains canonical payment fields and a Stark signature. The UI checks the receipt status, amount, UPI destination, signer public key, and signature before submitting the privacy claim. The Cairo escrow verifies the same canonical hash on-chain, prevents replay/duplicate claims, and controls deposit, intent, private-note settlement, and recovery paths. Settlement releases no public STRK to the buyer: it approves the privacy pool to credit the buyer's shielded note.
 
 ### Privacy and security boundaries
 
