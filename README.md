@@ -6,7 +6,6 @@ TrustX is a private and secure peer-to-peer STRK ↔ UPI onramp/offramp for Star
 
 - UI: [trustx-ui.vercel.app](https://trustx-ui.vercel.app/)
 - TEE replay/signing API: [trustx-tee-server.vercel.app](https://trustx-tee-server.vercel.app/health)
-- Starknet Sepolia explorer: [Voyager Sepolia](https://sepolia.voyager.online/)
 - Starknet Mainnet explorer: [Voyager](https://voyager.online/)
 - Starknet: [starknet.io](https://www.starknet.io/)
 
