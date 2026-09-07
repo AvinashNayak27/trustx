@@ -1,0 +1,58 @@
+:root {
+  color-scheme: dark;
+  --tx-bg: #0d0d0d;
+  --tx-bg-1: #141414;
+  --tx-bg-2: #1a1a1a;
+  --tx-panel: #141414;
+  --tx-well: #000;
+  --tx-line: #262626;
+  --tx-line-2: rgba(250, 250, 250, 0.05);
+  --tx-text: #fafafa;
+  --tx-dim: rgba(250, 250, 250, 0.65);
+  --tx-faint: #616161;
+  --tx-ghost: #3a3a3a;
+  --tx-accent: #c53400;
+  --tx-accent-d: #a02a00;
+  --tx-accent-glow: rgba(197, 52, 0, 0.55);
+  --tx-success: #4ade80;
+  --tx-pending: #c53400;
+  --tx-danger: #f85149;
+  --tx-info: #1f95e2;
+  --tx-popup-w: 1100px;
+  --tx-radius-card: 14px;
+  --tx-radius-well: 10px;
+  --tx-radius-cta: 2px;
+  --tx-display: "Sora", "Segoe UI", sans-serif;
+  --tx-body: "DM Sans", var(--font-body), system-ui, sans-serif;
+  --tx-mono: "IBM Plex Mono", var(--font-mono-ui), ui-monospace, monospace;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background: #0d0d0d;
+  color: var(--tx-text);
+}
+body {
+  font-family: var(--tx-body);
+  font-size: 14px;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+@media (min-width: 600px) {
+  body {
+    padding: 0 16px;
+  }
+}
